@@ -1,6 +1,6 @@
 package com.example.laba5_roomdemo
 
-import android.os.Bundle
+import  android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -20,28 +20,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             Laba5_RoomDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    ScreenSetup(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
-
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun ScreenSetup(modifier: Modifier = Modifier) {
+    MainScreen(modifier)
 }
 
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    Laba5_RoomDemoTheme {
-        Greeting("Android")
-    }
+fun MainScreen(modifier: Modifier = Modifier) {
+
 }
